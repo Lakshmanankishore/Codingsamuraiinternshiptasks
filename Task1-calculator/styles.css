@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: burlywood;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: blanchedalmond;
+    box-shadow: inset -5px -5px 12px burlywood, inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: rgba(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: 0.1s;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    background-color: burlywood;
+    box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 6px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 17px;
+}
+
+.equal {
+    width: 115px;
+    border-radius: 40px;
+    background-color: burlywood;
+    box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+@media (max-width: 80px) {
+    .calculator {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input {
+        font-size: 18px;
+        height: 50px;
+    }
+    button {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+    .equal {
+        width: 80px;
+        border-radius: 30px;
+    }
+}
